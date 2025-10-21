@@ -1,161 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Apex Health</title>
 
-  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="MainPage">
+<body>
+  <nav class="Navigation-Bar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="get-started.html">Get Started</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <!-- NAVIGATION -->
-  <header>
-    <nav class="Navigation-Bar">
-      <a href="#Home" class="active">Home</a>
-      <a href="#Why-Apex">Why Us</a>
-      <a href="#Our-Services">Our Services</a>
-      <a href="#Contact-Us">Contact Us</a>
-    </nav>
-  </header>
+  <main>
+    <section class="hero fade-in">
+      <h1>Apex Health</h1>
+      <p>Your gateway to intelligent, inclusive, and ethical healthcare.</p>
+      <a href="get-started.html" class="btn primary">
+        Get Started <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </section>
 
-  <!-- HERO SECTION -->
-  <section class="page one" id="Home">
-    <div class="content">
-      <div class="text">
-        <h1 class="Title My-Auto-Show-Left">Apex Health</h1>
-        <p class="Welcome-Message My-Auto-Show-Left-Delayed-And-Blured">
-          A university-driven startup revolutionizing healthcare through ethical AI. 
-          Our mission is to make medical guidance accessible, safe, and inclusive — 
-          connecting users with professionals while ensuring privacy and trust.
-        </p>
-        <button class="btn-gradient My-Auto-Show-Left-Delayed">
-          <span>Get Started</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
+    <section class="features fade-up">
+      <h2>Why Choose Apex Health</h2>
+      <p class="section-lead">We merge artificial intelligence and human expertise to build the future of care.</p>
+      <div class="grid">
+        <div class="card"><i class="fa-solid fa-heart-pulse"></i><h3>Ethical AI</h3><p>Privacy, fairness and transparency at every step.</p></div>
+        <div class="card"><i class="fa-solid fa-user-md"></i><h3>Trusted Experts</h3><p>Verified professionals you can rely on.</p></div>
+        <div class="card"><i class="fa-solid fa-clock"></i><h3>Fast Access</h3><p>Guidance and data when you need it most.</p></div>
       </div>
-      <div class="image My-Auto-Show-Right">
-        <img src="assets/images/hero.jpg" alt="Apex Health">
+      <div class="center">
+        <a href="services.html" class="btn outline">Explore Services</a>
       </div>
-    </div>
-    <div class="Arrow-Down My-Auto-Show-Up">
-      <a href="#Why-Apex"><i class="arrow down"></i></a>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- WHY APEX -->
-  <section class="page two" id="Why-Apex">
-    <div class="container">
-      <div class="text">
-        <h2 class="Title My-Scroll-Show-Up">Why Choose Apex Health</h2>
-        <p class="subTitle My-Scroll-Show-Up">
-          Apex Health blends empathy and artificial intelligence to create smarter, faster, 
-          and safer healthcare for all.
-        </p>
-      </div>
-
-      <div class="features My-Scroll-Show-Up">
-        <div class="feature">
-          <i class="fa-solid fa-shield-heart"></i>
-          <h3>Ethical AI</h3>
-          <p>We prioritize patient privacy and transparency with responsible AI design.</p>
-        </div>
-        <div class="feature">
-          <i class="fa-solid fa-people-group"></i>
-          <h3>Inclusive Design</h3>
-          <p>Built for everyone — accessible interfaces, diverse data, and equal care.</p>
-        </div>
-        <div class="feature">
-          <i class="fa-solid fa-bolt"></i>
-          <h3>Fast & Accurate</h3>
-          <p>AI-assisted triage and health suggestions in seconds, not minutes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="page three" id="Our-Services">
-    <h2 class="Title My-Scroll-Show-Up">Our Services</h2>
-    <div class="Cards My-Scroll-Show-Up">
-      <div class="card">
-        <i class="fas fa-universal-access icon"></i>
-        <h3>Special Needs Support</h3>
-        <p>Inclusive AI tools supporting accessibility and inclusivity.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-user-md"></i>
-        <h3>Doctor Portal</h3>
-        <p>Secure communication and profile management for professionals.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-clock"></i>
-        <h3>Medication Reminders</h3>
-        <p>Stay on track with smart notifications for your medication schedule.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-calendar-check"></i>
-        <h3>Reservations & Analysis</h3>
-        <p>Easy scheduling and document analysis for holistic care.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <footer id="Contact-Us" class="page four">
-    <div class="contact-section">
-      <div class="contact-form glass My-Scroll-Show-Up">
-        <h2>Contact Us</h2>
-        <p>Let’s collaborate to make healthcare smarter and more human.</p>
-        <form>
-          <div class="form-group">
-            <input id="name" type="text" required placeholder="Your Name">
-          </div>
-          <div class="form-group">
-            <input id="email" type="email" required placeholder="Your Email">
-          </div>
-          <div class="form-group">
-            <textarea id="message" required placeholder="Your Message"></textarea>
-          </div>
-          <button type="submit" class="btn-gradient">
-            Send Message <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-
-      <div class="contact-info My-Scroll-Show-Up">
-        <h3>Get in Touch</h3>
-        <p>Have an idea or partnership in mind? Reach out and let’s build the future of healthcare together.</p>
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:apexhealth@health-ai.com">apexhealth@health-ai.com</a>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-phone"></i>
-          <a href="tel:+213698779856">+213 698 779 856</a>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          Echahid Cheikh Larbi Tebessi University, Tebessa
-        </div>
-        <div class="socials">
-          <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="credits">
-      <p>© 2025 Apex Health. All rights reserved. | University Innovation Project</p>
-    </div>
+  <footer>
+    <p>© 2025 Apex Health — Revolutionizing healthcare through AI.</p>
   </footer>
-
   <script src="js/script.js"></script>
 </body>
 </html>

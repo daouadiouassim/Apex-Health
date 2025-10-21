@@ -1,32 +1,25 @@
-// Highlight nav item when in view
-const sections = document.querySelectorAll(".page");
-const navLinks = document.querySelectorAll(".Navigation-Bar a");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => link.classList.remove("active"));
-      document
-        .querySelector(`.Navigation-Bar a[href="#${entry.target.id}"]`)
-        .classList.add("active");
-    }
+// Apex Health - polished JS
+document.addEventListener('DOMContentLoaded',()=>{
+  // highlight active nav
+  const path = location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.Navigation-Bar a').forEach(a=>{
+    const href=a.getAttribute('href');
+    if(href===path) a.classList.add('active');
   });
-}, { threshold: 0.6 });
 
-sections.forEach(section => observer.observe(section));
+  // button press
+  document.querySelectorAll('.btn').forEach(b=>{
+    b.addEventListener('mousedown',()=>b.style.transform='scale(.96)');
+    b.addEventListener('mouseup',()=>b.style.transform='');
+    b.addEventListener('mouseleave',()=>b.style.transform='');
+  });
 
-// Smooth scroll
-document.querySelectorAll(".Navigation-Bar a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    document.querySelector(link.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+  // forms
+  document.querySelectorAll('form').forEach(f=>{
+    f.addEventListener('submit',e=>{
+      e.preventDefault();
+      alert('✅ Thank you! Your form was submitted successfully.');
+      f.reset();
     });
   });
-});
-
-// Simple form feedback (non-functional demo)
-document.querySelector("form").addEventListener("submit", e => {
-  e.preventDefault();
-  alert("✅ Message sent successfully!");
 });
