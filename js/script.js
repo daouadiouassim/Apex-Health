@@ -1,41 +1,32 @@
-const navigationItems = document.querySelectorAll('.Navigation-Bar a');
+// Highlight nav item when in view
+const sections = document.querySelectorAll(".page");
+const navLinks = document.querySelectorAll(".Navigation-Bar a");
 
-removeNavigationItems = () =>{
-  navigationItems.forEach(item => {
-    item.classList.remove('active');
-  });
-}
-
-const AddActiveClass = (entries, observer) => {
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if(entry.isIntersecting){
-      let currentPage = document.querySelector(`.Navigation-Bar a[href="#${entry.target.id}"]`);
-      removeNavigationItems();
-      currentPage.classList.add('active');
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove("active"));
+      document
+        .querySelector(`.Navigation-Bar a[href="#${entry.target.id}"]`)
+        .classList.add("active");
     }
   });
-};
-pages = document.querySelectorAll(".page")
-options = {threshold: 0.6};
-const observer = new IntersectionObserver(AddActiveClass, options);
-pages.forEach(page => {
-  observer.observe(page);
-})
+}, { threshold: 0.6 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (!CSS.supports('animation-timeline', 'view(block)')) {
-      const cards = document.querySelectorAll('.My-Scroll-Show-Up');
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.style.animation = 'scrollShowUp 1s ease-out forwards';
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { rootMargin: '0px 0px -20% 0px', threshold: 0.6 }
-      );
-      cards.forEach((card) => observer.observe(card));
-    }
+sections.forEach(section => observer.observe(section));
+
+// Smooth scroll
+document.querySelectorAll(".Navigation-Bar a").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+
+// Simple form feedback (non-functional demo)
+document.querySelector("form").addEventListener("submit", e => {
+  e.preventDefault();
+  alert("✅ Message sent successfully!");
 });
