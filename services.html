@@ -4,35 +4,60 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Services | Apex Health</title>
+  <meta name="description" content="Apex Health - services for clinicians and patients." />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <nav class="Navigation-Bar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="get-started.html">Get Started</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<body class="light">
+  <header class="site-header">
+    <nav class="Navigation-Bar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><img src="assets/images/logo-small.png" alt="logo" class="logo-small"><span class="brand-text">Apex Health</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="get-started.html" class="nav-link">Get Started</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle-3" class="icon-btn" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+      </div>
+    </nav>
+  </header>
 
   <main>
-    <section class="page-header fade-in">
-      <h1>Our Services</h1>
-      <p>Intelligent healthcare solutions for professionals and patients alike.</p>
+    <section class="page-header container">
+      <h1>Services</h1>
+      <p class="section-lead">Tools and integrations to help clinicians and patients — secure, fast and simple.</p>
     </section>
 
-    <section class="services-grid fade-up">
+    <section class="services-grid container">
       <div class="grid">
-        <div class="card"><i class="fa-solid fa-stethoscope"></i><h3>Doctor Portal</h3><p>Manage records, communicate securely, and access trusted resources.</p></div>
-        <div class="card"><i class="fa-solid fa-pills"></i><h3>Pharmacy Integration</h3><p>Streamlined prescriptions and digital refills made simple.</p></div>
-        <div class="card"><i class="fa-solid fa-robot"></i><h3>AI Assistant</h3><p>Empowering clinicians with evidence-based decision support.</p></div>
+        <article class="card">
+          <i class="fa-solid fa-stethoscope card-icon"></i>
+          <h3>Doctor Portal</h3>
+          <p>Secure profiles, patient messaging and document access for clinicians.</p>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-pills card-icon"></i>
+          <h3>Pharmacy Integration</h3>
+          <p>Prescription workflows, pharmacy lookups and refill coordination.</p>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-robot card-icon"></i>
+          <h3>AI Assistant</h3>
+          <p>Decision-support tools and reminders that complement clinician judgment.</p>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer><p>© 2025 Apex Health</p></footer>
+  <footer class="site-footer"><div class="container"><p>© 2025 Apex Health</p></div></footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>

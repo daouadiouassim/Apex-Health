@@ -4,38 +4,64 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Get Started | Apex Health</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Join Apex Health — early access for clinicians and users." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <nav class="Navigation-Bar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="get-started.html">Get Started</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<body class="light">
+  <header class="site-header">
+    <nav class="Navigation-Bar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><img src="assets/images/logo-small.png" alt="logo" class="logo-small"><span class="brand-text">Apex Health</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="get-started.html" class="nav-link">Get Started</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle-2" class="icon-btn" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+      </div>
+    </nav>
+  </header>
 
   <main>
-    <section class="page-header fade-in">
+    <section class="page-header container">
       <h1>Get Started</h1>
-      <p>Join the Apex Health early-access program today.</p>
+      <p class="section-lead">Sign up for early access — choose your role and tell us how we can help.</p>
     </section>
 
-    <section class="form-section fade-up">
-      <form id="signup">
-        <label>Name</label><input type="text" required />
-        <label>Email</label><input type="email" required />
-        <label>Role</label>
-        <select><option>Doctor</option><option>Patient</option><option>Researcher</option></select>
-        <label>Message</label><textarea rows="4"></textarea>
-        <button class="btn primary" type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+    <section class="form-section container">
+      <form id="signup-form" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="role">I am a</label>
+        <select id="role" name="role" required>
+          <option>Doctor</option>
+          <option>Nurse</option>
+          <option>Pharmacist</option>
+          <option>Patient</option>
+          <option>Researcher</option>
+        </select>
+
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit" class="Animated-Button">Submit <i class="fa-solid fa-paper-plane"></i></button>
       </form>
     </section>
   </main>
 
-  <footer><p>© 2025 Apex Health</p></footer>
+  <footer class="site-footer">
+    <div class="container"><p>© 2025 Apex Health</p></div>
+  </footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>

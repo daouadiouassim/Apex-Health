@@ -4,42 +4,59 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact | Apex Health</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Contact Apex Health for partnerships and collaborations." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <nav class="Navigation-Bar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="get-started.html">Get Started</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<body class="light">
+  <header class="site-header">
+    <nav class="Navigation-Bar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><img src="assets/images/logo-small.png" alt="logo" class="logo-small"><span class="brand-text">Apex Health</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="get-started.html" class="nav-link">Get Started</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle-4" class="icon-btn" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button>
+      </div>
+    </nav>
+  </header>
 
   <main>
-    <section class="page-header fade-in">
-      <h1>Contact Us</h1>
-      <p>We’d love to hear from you. Let’s make healthcare better together.</p>
+    <section class="page-header container">
+      <h1>Contact</h1>
+      <p class="section-lead">We’d love to hear from you — partnerships, questions or feedback.</p>
     </section>
 
-    <section class="contact-grid fade-up">
-      <form id="contact-form">
-        <label>Name</label><input type="text" required />
-        <label>Email</label><input type="email" required />
-        <label>Message</label><textarea rows="5" required></textarea>
-        <button class="btn primary" type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+    <section class="container contact-grid">
+      <form id="contact-form" novalidate>
+        <label for="c-name">Name</label>
+        <input id="c-name" name="name" type="text" required>
+
+        <label for="c-email">Email</label>
+        <input id="c-email" name="email" type="email" required>
+
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="Animated-Button">Send Message <i class="fa-solid fa-paper-plane"></i></button>
       </form>
 
-      <div class="info">
+      <aside class="contact-info">
         <p><i class="fa-solid fa-envelope"></i> apexhealth@health-ai.com</p>
         <p><i class="fa-solid fa-phone"></i> +213 698 779 856</p>
-        <p><i class="fa-solid fa-location-dot"></i> Tebessa University, Algeria</p>
-      </div>
+        <p><i class="fa-solid fa-location-dot"></i> Echahid Cheikh Larbi Tebessi University, Tebessa</p>
+      </aside>
     </section>
   </main>
 
-  <footer><p>© 2025 Apex Health</p></footer>
+  <footer class="site-footer"><div class="container"><p>© 2025 Apex Health</p></div></footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>
