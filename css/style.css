@@ -205,7 +205,8 @@ input, textarea, select{width:100%;padding:10px;border-radius:8px;border:1px sol
 #back-to-top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:10px;background:var(--accent);color:#fff;border:none;display:none;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,0.15);cursor:pointer}
 
 /* footer */
-.site-footer{padding:28px 0;background:var(--text);color:#fff;text-align:center;margin-top:36px}
+.site-footer{position: fixed;
+  bottom: 0;padding:28px 0;background:var(--text);color:#fff;text-align:center;margin-top:36px}
 
 /* --- utility --- */
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
